@@ -10,11 +10,16 @@ export default class NewsCard extends Component {
 
     }
 
+    onPress=()=>{
+      this.props.onPress(this.props.Article)
+    }
+
 
       render() {
         return (
           
-              <Card onPress={this.props.onPress(this.props.Article)}>
+          <TouchableHighlight onPress={this.onPress}>
+              <Card >
                 <CardItem header bordered>
                   <Text style={{fontSize:20,alignSelf:'center'}}>{this.props.Article.title}</Text>
                 </CardItem>
@@ -37,7 +42,7 @@ export default class NewsCard extends Component {
                   </Body>
                 </CardItem>
               </Card>
-           
+              </TouchableHighlight>
                     )
            
            

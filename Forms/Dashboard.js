@@ -49,11 +49,12 @@ class Dashboard extends Component {
     }
 
     NavigateToDetails=(articleSource)=>{
-       
-        if (articleSource == null || typeof articleSource == "undefined") {
+      
+     
+        // if (articleSource == null || typeof articleSource == "undefined") {
 
-            this.props.navigation.push('NewsDetails',{fullArticle:articleSource})
-        }        
+            this.props.navigation.navigate('NewsDetails',{fullArticle:articleSource})
+        // }        
   
      
 

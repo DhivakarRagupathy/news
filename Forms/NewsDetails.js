@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, TouchableHighlight,Image,Text } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class NewsDetails extends Component {
 
     constructor(props) {
         super(props);
-       this.fullart=this.props.fullArticle; 
-       
+       this.fullart=this.props.navigation.state.params.fullArticle; 
+       console.log("News details-const")
+       console.log(this.fullart)
     }
 
     render(){
         if(typeof this.fullart == "undefined") return null
         return(
-           <View>
+           <ScrollView>
                <Text style={{fontSize:30,margin:10}}>{this.fullart.title}</Text>
                <View style={{flexDirection:'row',margin:10}}>
                <Text style={{margin:10,}}>{this.fullart.author.split(',')[0]}</Text>
@@ -24,7 +26,7 @@ export default class NewsDetails extends Component {
           source={{uri: this.fullart.urlToImage}}
         />
                <Text style={{margin:30,fontSize:20}} >{this.fullart.content}</Text>
-           </View>
+           </ScrollView>
         )
     }
 }
