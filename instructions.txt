@@ -9,13 +9,9 @@ Instructions To Run On Android :
 
 2.Make sure you have installed node.js, java, java sdk and android studio
 
-3.run npm install inside your local repository.
+3.start your metro bundler with react-native start
 
-4.run react-native link to link dependencies like react-native-vector-icons and react-native-gesture-handler
-
-5.start your metro bundler with react-native start
-
-6.run the application in AVD with react-native run-android
+4.run the application in AVD with react-native run-android
 
 
 
