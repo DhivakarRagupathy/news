@@ -11,6 +11,7 @@ const RootStack= createDrawerNavigator({
     navigationOptions: {
       title: 'Dashboard',
     }, 
+    
   }, 
   NewsDetails: {
     screen: NewsDetails,

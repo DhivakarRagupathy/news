@@ -9,6 +9,7 @@ import * as ActionCreators from '../ActionCreators/DashboardActionCreator'
 class Dashboard extends Component {
 
     static navigationOptions = {
+        title: 'Home',
         drawerLabel: 'Dashboard',
         drawerIcon: () => (
             <Icon type="FontAwesome" name='th-list' style={{ fontSize: 25, alignItems: 'flex-start' }}
@@ -20,6 +21,8 @@ class Dashboard extends Component {
             />
         ),
     };
+
+  
 
     constructor(props) {
         super(props);

@@ -5,6 +5,18 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 export default class NewsDetails extends Component {
 
+    static navigationOptions = {
+        title: "Details"
+    }
+
+    getHeader()
+    {
+        // if(typeof this.props != "undefined" || typeof this.props.navigation != "undefined" )
+        // {
+        //     return this.props.navigation.state.params.fullArticle.title
+        // }
+        // return ""
+    }
     constructor(props) {
         super(props);
        this.fullart=this.props.navigation.state.params.fullArticle; 
